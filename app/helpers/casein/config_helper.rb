@@ -40,6 +40,6 @@ module Casein
     def casein_config_javascript_includes
       %w[casein/casein casein/custom]
     end
-    
+
   end
 end
