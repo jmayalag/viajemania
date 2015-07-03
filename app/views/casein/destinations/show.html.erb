@@ -15,4 +15,5 @@
 
 <%= content_for :sidebar do %>
 	<li><%= link_to "#{casein_show_icon "th-list"}Volver a lista".html_safe, casein_destinations_path %></li>
+  <li><%= link_to "#{casein_show_icon "th-list"}Ir a categoría".html_safe, casein_category_path(@destination.category) %></li>
 <% end %>

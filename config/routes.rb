@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 		resources :slides
 		resources :destinations
 		resources :categories
+
+    get 'destinations/category/:id' => 'destinations#category_new', as: 'destination_to_category'
 	end
 
   # The priority is based upon order of creation: first created -> highest priority.

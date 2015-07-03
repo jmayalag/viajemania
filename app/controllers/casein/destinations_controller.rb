@@ -21,6 +21,12 @@ module Casein
     	@destination = Destination.new
     end
 
+    def category_new
+      @casein_page_title = 'Agregar un nuevo destino'
+      @category = Category.friendly.find(params[:id])
+      @destination = Destination.new(category: @category)
+    end
+
     def create
       @destination = Destination.new destination_params
     

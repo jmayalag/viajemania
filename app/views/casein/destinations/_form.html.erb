@@ -24,6 +24,10 @@
 		<%= casein_url_field f, f.object, :imagen %>
 	</div>
 	<div class="col-lg-6">
-		<%= casein_text_field f, f.object, :category_id %>
+    <% if @category %>
+		    <%= casein_text_field f, f.object, :category_id, {:disabled => true} %>
+    <% else %>
+        <%= casein_text_field f, f.object, :category_id %>
+    <% end %>
 	</div>
 </div>

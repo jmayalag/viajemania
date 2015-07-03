@@ -5,7 +5,6 @@
 		<tr>
 			<th><%= casein_sort_link "Nombre", :nombre %></th>
 			<th><%= casein_sort_link "Descripcion", :descripcion %></th>
-			<th><%= casein_sort_link "Link", :link %></th>
 			<th><%= casein_sort_link "Costo", :costo %></th>
 			<th><%= casein_sort_link "Imagen", :imagen %></th>
 			<th>&nbsp;</th>
@@ -16,7 +15,6 @@
 		<tr>
 			<td><%= casein_table_cell_link destination.nombre, casein_destination_path(destination) %></td>
 			<td><%= casein_table_cell_link destination.descripcion, casein_destination_path(destination) %></td>
-			<td><%= casein_table_cell_link destination.link, casein_destination_path(destination) %></td>
 			<td><%= casein_table_cell_link destination.costo, casein_destination_path(destination) %></td>
 			<td><%= casein_table_cell_link destination.imagen, casein_destination_path(destination) %></td>
 			<td class="delete">
