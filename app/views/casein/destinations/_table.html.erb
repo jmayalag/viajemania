@@ -6,6 +6,8 @@
 			<th><%= casein_sort_link "Nombre", :nombre %></th>
 			<th><%= casein_sort_link "Descripcion", :descripcion %></th>
 			<th><%= casein_sort_link "Costo", :costo %></th>
+      <th><%= casein_sort_link "Creado", :created_at %></th>
+      <th><%= casein_sort_link "Actualizado", :updated_at %></th>
 			<th>&nbsp;</th>
 		</tr>
 	</thead>
@@ -15,6 +17,8 @@
 			<td><%= casein_table_cell_link destination.nombre, casein_destination_path(destination) %></td>
 			<td><%= casein_table_cell_link destination.descripcion, casein_destination_path(destination), casein_truncate: 40 %></td>
 			<td><%= casein_table_cell_link destination.costo, casein_destination_path(destination) %></td>
+      <td><%= casein_table_cell_link destination.created_at, casein_destination_path(destination) %></td>
+      <td><%= casein_table_cell_link destination.updated_at, casein_destination_path(destination) %></td>
 			<td class="delete">
 				<%= link_to(casein_show_row_icon("trash"), casein_destination_path(destination), :method => :delete, :data => { :confirm => "Esta seguro que quiere elminar este destino?" }) %>
 			</td>

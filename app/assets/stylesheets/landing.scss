@@ -10,6 +10,7 @@
 $blue-sky: #4471b5;
 $red-light: #c4007a;
 $red-lighter: #f60078;
+$yellow-light: #ffdb00;
 
 body {
   width: 100%;
@@ -18,6 +19,7 @@ body {
   padding-top: 70px;
   //color: #fff;
   //background-color: #000;
+  -webkit-font-smoothing: subpixel-antialiased
 }
 
 html {
@@ -311,25 +313,111 @@ a:focus {
   -moz-background-size: auto;
   background-size: auto;
   -o-background-size: auto;
+
+  .package-title {
+    color: $red-lighter;
+    font-family: "Lato";
+    //line-height: 40px;
+    padding: 6px 6px;
+    display: inline-block;
+    background: white;
+  }
+
+  .package-link {
+    color: white;
+    //line-height: 40px;
+    padding: 5px 10px;
+    margin: 10px 25px;
+    display: inline-block;
+    background: $blue-sky;
+  }
+
+  .thumbnail {
+    display: inline-block;
+    font-family: 'Lato';
+    border-top-color: $red-light;
+    border-bottom-color: $red-light;
+    padding: 0px;
+    height: 350px;
+    width: 242px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .caption {
+      padding: 10px 20px;
+    }
+
+    h3 {
+      font-family: 'Lato';
+      text-transform: uppercase;
+      border-bottom: 2px inset $gray-light;
+      padding-bottom: 10px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
 }
 
-.package-title {
-  color: $red-lighter;
-  font-family: "Lato";
-  //line-height: 40px;
-  padding: 6px 6px;
-  display: inline-block;
-  background: white;
+.package-section-altern {
+  width: 100%;
+  padding: 50px 0;
+  color: #fff;
+  //background: image_url("03_Pattern_FondoInternacionales.jpg") repeat center center scroll;
+  background-color: white;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: auto;
+  -o-background-size: auto;
+
+  .package-title {
+    color: white;
+    font-family: "Lato";
+    //line-height: 40px;
+    padding: 6px 6px;
+    display: inline-block;
+    background: $blue-sky;
+  }
+
+  .package-link {
+    color: white;
+    //line-height: 40px;
+    padding: 5px 10px;
+    margin: 10px 25px;
+    display: inline-block;
+    background: $red-lighter;
+  }
+
+  .thumbnail {
+    background-color: $yellow-light;
+    display: inline-block;
+    font-family: 'Lato';
+    border-top-color: $red-light;
+    border-bottom-color: $red-light;
+    padding: 0px;
+    height: 350px;
+    width: 242px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .caption {
+      padding: 10px 20px;
+    }
+
+    h3 {
+      font-family: 'Lato';
+      text-transform: uppercase;
+      border-bottom: 2px inset $gray-light;
+      padding-bottom: 10px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
 }
 
-.package-link {
-  color: white;
-  //line-height: 40px;
-  padding: 5px 10px;
-  margin: 10px 25px;
-  display: inline-block;
-  background: $blue-sky;
-}
 
 #map {
   width: 100%;
@@ -349,7 +437,7 @@ a:focus {
 
   #map {
     height: 400px;
-    margin-top: 100px;
+    margin-top: 0px;
   }
 }
 
@@ -520,45 +608,23 @@ body {
   }
 }
 
-.thumbnail {
-  display: inline-block;
-  font-family: 'Lato';
-  border-top-color: $red-light;
-  border-bottom-color: $red-light;
-  padding: 0px;
-  height: 350px;
-  width: 242px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-
-  .caption {
-    padding: 10px 20px;
-  }
-
-  h3 {
-    font-family: 'Lato';
-    text-transform: uppercase;
-    border-bottom: 2px inset $gray-light;
-    padding-bottom: 10px;
-  }
-
-  p {
-    margin-top: 10px;
-  }
-}
-
 .middle-contact {
   border-left: 2px solid white;
   border-right: 2px solid white;
 }
 
 footer {
-  padding: 15px 0;
-}
+  font-family: 'Lato', sans-serif;
+  padding: 10px 0;
 
-footer p {
-  margin: 0;
-  color: $gray-light;
+  .dev-logo {
+    height: 30px;
+  }
+
+  p {
+    margin: 0;
+    color: $gray-light;
+  }
 }
 
 .destination-text {

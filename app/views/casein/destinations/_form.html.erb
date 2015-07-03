@@ -33,7 +33,9 @@
   <div class="col-lg-6">
     <div class='form-group'><label class="control-label" for="slide_img">Portada</label>
       <div class='well'>
-        <%= image_tag @destination.front_image, width: '250px', class:'center-block' %>
+        <% if @destination.front_image.url %>
+            <%= image_tag @destination.front_image, width: '250px', class:'center-block' %>
+        <% end %>
         <%= f.file_field :front_image, class:'form-control' %>
       </div>
     </div>
@@ -42,7 +44,9 @@
 	<div class="col-lg-6">
     <div class='form-group'><label class="control-label" for="slide_img">Imagen</label>
       <div class='well'>
-        <%= image_tag @destination.imagen, width: '250px', class:'center-block' %>
+        <% if @destination.imagen.url %>
+            <%= image_tag @destination.imagen, width: '250px', class:'center-block' %>
+        <% end %>
         <%= f.file_field :imagen, class:'form-control' %>
       </div>
     </div>

@@ -5,6 +5,8 @@
 		<tr>
 			<th><%= casein_sort_link "Nombre", :nombre %></th>
 			<th><%= casein_sort_link "Subtitulo", :subtitulo %></th>
+      <th><%= casein_sort_link "Creado", :created_at %></th>
+      <th><%= casein_sort_link "Actualizado", :updated_at %></th>
 			<th>&nbsp;</th>
 		</tr>
 	</thead>
@@ -13,6 +15,8 @@
 		<tr>
 			<td><%= casein_table_cell_link slide.nombre, casein_slide_path(slide) %></td>
 			<td><%= casein_table_cell_link slide.subtitulo, casein_slide_path(slide), casein_truncate: 50 %></td>
+      <td><%= casein_table_cell_link slide.created_at, casein_destination_path(slide) %></td>
+      <td><%= casein_table_cell_link slide.updated_at, casein_destination_path(slide) %></td>
 			<td class="delete">
 				<%= link_to(casein_show_row_icon("trash"), casein_slide_path(slide), :method => :delete, :data => { :confirm => "Esta seguro que quiere elminar el slide?" }) %>
 			</td>
