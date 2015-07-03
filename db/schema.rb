@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150703145027) do
+ActiveRecord::Schema.define(version: 20150703152315) do
 
   create_table "casein_admin_users", force: :cascade do |t|
     t.string   "login",                           null: false
@@ -76,7 +76,6 @@ ActiveRecord::Schema.define(version: 20150703145027) do
 
   create_table "slides", force: :cascade do |t|
     t.string   "nombre"
-    t.string   "imagen"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "subtitulo"

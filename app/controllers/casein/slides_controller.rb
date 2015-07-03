@@ -12,6 +12,7 @@ module Casein
   		@slides = Slide.order(sort_order(:nombre)).paginate :page => params[:page]
     end
 
+
     def show
       @casein_page_title = 'Ver slide'
     end

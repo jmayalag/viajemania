@@ -5,7 +5,8 @@
 <%= form_for @category, :url => casein_category_path(@category) do |f| %>
 
 	<%= render :partial => 'casein/categories/form', :locals => { :f => f } %>
-	
+	<%= render :partial => 'casein/destinations/table', :locals => {:destinations => @category.destinations} %>
+
 	<p class="submits">
 	  	<%= link_to 'Cancelar', casein_categories_path, :class => 'btn btn-mini btn-danger' %>
 		<%= f.submit "Guardar cambios", :class => "btn btn-mini btn-primary" %>

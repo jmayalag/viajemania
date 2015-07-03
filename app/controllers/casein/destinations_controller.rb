@@ -11,7 +11,7 @@ module Casein
       @casein_page_title = 'Destinos'
   		@destinations = Destination.order(sort_order(:nombre)).paginate :page => params[:page]
     end
-  
+
     def show
       @casein_page_title = 'Ver destino'
     end
@@ -53,7 +53,7 @@ module Casein
   
     private
       def set_destination
-        destination = Destination.friendly.find(params[:id])
+        @destination = Destination.friendly.find(params[:id])
       end
 
       def destination_params
