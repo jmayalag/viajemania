@@ -7,10 +7,10 @@
         <div class="carousel-inner">
           <% @slides.each do |slide| %>
               <div class="item">
-                <%= image_tag slide.image, class: "img-responsive img-full" %>
+                <%= image_tag slide.imagen, class: "img-responsive img-full" %>
                 <div class="carousel-caption">
-                  <h1><%= slide.name %></h1>
-                  <p class="carousel-subtitle"><%= slide.description %></p><br>
+                  <h1><%= slide.nombre %></h1>
+                  <p class="carousel-subtitle"><%= slide.subtitulo %></p><br>
                   <a href="#about" class="btn btn-circle page-scroll">
                     <i class="fa fa-angle-double-down animated"></i>
                   </a>

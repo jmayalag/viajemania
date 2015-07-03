@@ -12,18 +12,18 @@
 
 <div class="row">
 	<div class="col-lg-6">
-		<%= casein_text_field f, f.object, :link %>
+		<%= casein_url_field f, f.object, :link %>
 	</div>
 	<div class="col-lg-6">
-		<%= casein_text_field f, f.object, :costo %>
+		<%= casein_number_field f, f.object, :costo %>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-lg-6">
-		<%= casein_text_field f, f.object, :imagen %>
+		<%= casein_url_field f, f.object, :imagen %>
 	</div>
 	<div class="col-lg-6">
-		
+		<%= casein_text_field f, f.object, :category_id %>
 	</div>
 </div>

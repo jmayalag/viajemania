@@ -12,7 +12,7 @@ class LandingController < ApplicationController
   end
 
   def destination
-    @destination = Content.find(params[:id])
+    @destination = Destination.find(params[:id])
     @category = @destination.category
   end
 end

@@ -3,8 +3,8 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-@import 'bootstrap';
 @import 'bootstrap-sprockets';
+@import 'bootstrap';
 
 $blue-sky: #4471b5;
 $red-light: #c4007a;
@@ -532,6 +532,10 @@ body {
   border-top-color: $red-light;
   border-bottom-color: $red-light;
   padding: 0px;
+  height: 350px;
+  width: 242px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .middle-contact {

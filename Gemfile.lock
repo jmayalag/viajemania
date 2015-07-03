@@ -175,7 +175,7 @@ DEPENDENCIES
   byebug
   casein (~> 5.1.1)
   coffee-rails (~> 4.1.0)
-  font-awesome-rails
+  font-awesome-rails (~> 4.1.0.0)
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.1)

@@ -1,14 +1,10 @@
-<%= render 'landing_pages/slider' %>
+<%= render 'landing/slider' %>
 
 <!-- Category Section -->
-<section id="packages-<%= @category.slug %>" class="container content-section text-center">
-  <div class="row">
+<section id="packages-<%= @category.slug %>" class="container-fluid content-section text-center">
+  <div class="ro">
     <div class="col-lg-8 col-lg-offset-2">
-      <div class="row">
-        <%= render @destinations %>
-      </div>
-    </div>
-
+      <%= render @destinations %>
     </div>
   </div>
 </section>
