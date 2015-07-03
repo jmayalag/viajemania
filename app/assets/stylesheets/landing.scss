@@ -284,6 +284,7 @@ a:focus {
 
 .content-section {
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .contact-section {
@@ -349,6 +350,7 @@ a:focus {
 @media(min-width: 767px) {
   .content-section {
     padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .download-section {
@@ -447,7 +449,7 @@ body {
   //width: auto;
   //height: 225px;
   //max-height: 225px;
-  -webkit-mask-image: -webkit-gradient(linear, left 80%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  -webkit-mask-image: -webkit-gradient(linear, left 80%, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
 }
 
 .box {
@@ -549,4 +551,10 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+.destination-text {
+  font-family: Arial;
+  color: $gray-light;
+  padding: 40px;
 }

@@ -4,5 +4,6 @@ class Destination < ActiveRecord::Base
   friendly_id :nombre, use: :slugged
   validates_presence_of :nombre, :descripcion, :category_id
   has_attached_file :imagen
-  validates_attachment_content_type :imagen, :content_type => /\Aimage\/.*\Z/
+  has_attached_file :front_image
+  validates_attachment_content_type :imagen, :front_image, :content_type => /\Aimage\/.*\Z/
 end

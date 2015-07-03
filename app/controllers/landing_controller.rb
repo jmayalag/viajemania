@@ -6,13 +6,13 @@ class LandingController < ApplicationController
   end
 
   def category
-    @category = Category.find(params[:id])
+    @category = Category.friendly.find(params[:id])
     @destinations = @category.destinations
     @slides = Slide.all
   end
 
   def destination
-    @destination = Destination.find(params[:id])
+    @destination = Destination.friendly.find(params[:id])
     @category = @destination.category
   end
 end

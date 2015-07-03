@@ -1,11 +1,12 @@
-<!-- Destination Section -->
+<!-- About Section -->
 <section id="about" class="container content-section text-center">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-      <%= link_to "Volver a paquetes", landing_category_path(@category) %>
-      <%= image_tag @destination.imagen %>
-      <h2><%= @destination.nombre %></h2>
-      <p><%= @destination.descripcion %></p>
+    <div class="col-lg-10 col-lg-offset-1 col-md-6 col-md-offset-3">
+      <%= image_tag @destination.imagen, height: '400px', class: 'pull-left' %>
+      <div class="destination-text">
+        <h3 align="left" ><%= @destination.nombre %></h3>
+        <p><%= @destination.descripcion %></p>
+      </div>
     </div>
   </div>
 </section>
