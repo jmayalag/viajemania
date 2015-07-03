@@ -563,3 +563,14 @@ footer p {
 .destination-cost {
   color: $red-light
 }
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+#map-canvas {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

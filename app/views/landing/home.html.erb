@@ -24,7 +24,8 @@
           <div class="col-lg-12 text-center">
             <h5 class="package-title"><%= category.nombre %></h5>
             <div class="row">
-              <%= render category.destinations.where(mostrar_en_portada: true).limit(4) %>
+              <%# calculate_offset(category.front_destinations.count) %>
+              <%= render category.front_destinations %>
             </div>
           </div>
           <%= link_to "Ver otros paquetes...", landing_category_path(category), class: "package-link" %>
@@ -33,7 +34,33 @@
     </section>
 <% end %>
 
-<!--&lt;!&ndash; Map Section &ndash;&gt;-->
-<!--<div id="map"></div>-->
-<!--&lt;!&ndash; Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ &ndash;&gt;-->
-<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>-->
+<!-- Map Section -->
+<!--<div id="map-canvas"></div>-->
+<div id="map"></div>
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY4SBhYmg67mC6-e8P6XXzRYLSUCbbI40&sensor=false"></script>
+
+<% content_for :javascript do %>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY4SBhYmg67mC6-e8P6XXzRYLSUCbbI40">
+    </script>
+    <script type="text/javascript">
+        function initialize() {
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 15,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(-25.321859, -57.576613),
+
+                // Disables the default Google Maps UI components
+                disableDefaultUI: false,
+                scrollwheel: false,
+                draggable: true
+            };
+            var map = new google.maps.Map(document.getElementById('map'),
+                    mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+<% end %>
