@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
+
 gem 'casein', '~>5.1.1'
+gem 'friendly_id', '~> 5.1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record

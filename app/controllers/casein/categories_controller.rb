@@ -14,7 +14,7 @@ module Casein
   
     def show
       @casein_page_title = 'View category'
-      @category = Category.find params[:id]
+      @category = Category.friendly.find params[:id]
     end
   
     def new
@@ -37,7 +37,7 @@ module Casein
     def update
       @casein_page_title = 'Update category'
       
-      @category = Category.find params[:id]
+      @category = Category.friendly.find params[:id]
     
       if @category.update_attributes category_params
         flash[:notice] = 'Category has been updated'
@@ -49,7 +49,7 @@ module Casein
     end
  
     def destroy
-      @category = Category.find params[:id]
+      @category = Category.friendly.find params[:id]
 
       @category.destroy
       flash[:notice] = 'Category has been deleted'

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'landing#home'
 
-  get '/:id' => 'landing#category', as: 'landing_category'
+  get 'category/:id' => 'landing#category', as: 'landing_category'
   get 'destination/:id' => 'landing#destination', as: 'landing_destination'
 
 	#Casein routes
