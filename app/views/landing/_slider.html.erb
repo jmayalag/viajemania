@@ -1,0 +1,44 @@
+<!-- Intro Header -->
+<header class="intro">
+  <div class="intro-body">
+    <div class="c-wrapper">
+      <div id="carousel-example-generic" class="carousel slide">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <% @slides.each do |slide| %>
+              <div class="item">
+                <%= image_tag slide.image, class: "img-responsive img-full" %>
+                <div class="carousel-caption">
+                  <h1><%= slide.name %></h1>
+                  <p class="carousel-subtitle"><%= slide.description %></p><br>
+                  <a href="#about" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                  </a>
+                </div>
+              </div>
+          <% end %>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <span class="icon-next"></span>
+        </a>
+      </div>
+      <!-- carousel end-->
+
+
+    </div>
+  </div>
+</header>
+
+<% content_for :javascript do %>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel();
+            $('.carousel-inner .item:first').addClass('active');
+        });
+    </script>
+<% end %>
