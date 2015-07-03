@@ -2,19 +2,18 @@
 
 module Casein
   class CategoriesController < Casein::CaseinController
-  
+    before_action :set_category, only: [:show, :edit, :update, :destroy]
     ## optional filters for defining usage according to Casein::AdminUser access_levels
     # before_filter :needs_admin, :except => [:action1, :action2]
     # before_filter :needs_admin_or_current_user, :only => [:action1, :action2]
   
     def index
-      @casein_page_title = 'Categories'
+      @casein_page_title = 'Categorias'
   		@categories = Category.order(sort_order(:nombre)).paginate :page => params[:page]
     end
   
     def show
       @casein_page_title = 'View category'
-      @category = Category.friendly.find params[:id]
     end
   
     def new
@@ -35,29 +34,29 @@ module Casein
     end
   
     def update
-      @casein_page_title = 'Update category'
-      
-      @category = Category.friendly.find params[:id]
-    
+      @casein_page_title = 'Editar categoría'
+
       if @category.update_attributes category_params
-        flash[:notice] = 'Category has been updated'
+        flash[:notice] = 'Categoría actualizada'
         redirect_to casein_categories_path
       else
-        flash.now[:warning] = 'There were problems when trying to update this category'
+        flash.now[:warning] = 'Se encontraron problemas al actualizar esta categoría'
         render :action => :show
       end
     end
  
     def destroy
-      @category = Category.friendly.find params[:id]
-
       @category.destroy
-      flash[:notice] = 'Category has been deleted'
+      flash[:notice] = 'Se ha eliminado la categoría'
       redirect_to casein_categories_path
     end
   
     private
-      
+
+      def set_category
+        @category = Category.friendly.find(params[:id])
+      end
+
       def category_params
         params.require(:category).permit(:nombre, :descripcion)
       end
