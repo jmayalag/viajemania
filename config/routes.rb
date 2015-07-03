@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'landing#home'
+
 	#Casein routes
 	namespace :casein do
 		resources :slides
