@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150703023512) do
+ActiveRecord::Schema.define(version: 20150703025507) do
 
   create_table "casein_admin_users", force: :cascade do |t|
     t.string   "login",                           null: false
@@ -33,6 +33,39 @@ ActiveRecord::Schema.define(version: 20150703023512) do
     t.string   "time_zone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "nombre"
+    t.text     "descripcion"
+    t.string   "slug"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "categories", ["nombre"], name: "index_categories_on_nombre", unique: true
+  add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true
+
+  create_table "destinations", force: :cascade do |t|
+    t.string   "nombre"
+    t.text     "descripcion"
+    t.string   "slug"
+    t.string   "link"
+    t.integer  "costo"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "imagen"
+  end
+
+  add_index "destinations", ["category_id"], name: "index_destinations_on_category_id"
+  add_index "destinations", ["slug"], name: "index_destinations_on_slug", unique: true
+
+  create_table "slides", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "imagen"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
