@@ -12,7 +12,7 @@
 	<% slides.each do |slide| %>
 		<tr>
 			<td><%= casein_table_cell_link slide.nombre, casein_slide_path(slide) %></td>
-			<td><%= casein_table_cell_link slide.subtitulo, casein_slide_path(slide) %></td>
+			<td><%= casein_table_cell_link slide.subtitulo, casein_slide_path(slide), casein_truncate: 50 %></td>
 			<td class="delete">
 				<%= link_to(casein_show_row_icon("trash"), casein_slide_path(slide), :method => :delete, :data => { :confirm => "Esta seguro que quiere elminar el slide?" }) %>
 			</td>

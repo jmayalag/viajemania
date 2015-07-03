@@ -1,12 +1,19 @@
 <!-- About Section -->
-<section id="about" class="container content-section text-center">
+<section id="about" class="container content-section center-block">
   <div class="row">
-    <div class="col-lg-10 col-lg-offset-1 col-md-6 col-md-offset-3">
-      <%= image_tag @destination.imagen, height: '400px', class: 'pull-left' %>
-      <div class="destination-text">
-        <h3 align="left" ><%= @destination.nombre %></h3>
-        <p><%= @destination.descripcion %></p>
+    <div class="col-lg-4 col-lg-offset-1 col-md-3 col-md-offset-3">
+      <%= image_tag @destination.imagen, class: 'img-responsive pull-left' %>
+    </div>
+    <div class="col-lg-6">
+      <div class="destination-text text-left text-justify">
+        <h3><%= @destination.nombre %></h3>
+        <dl>
+          <dt>Descripción</dt>
+          <dd><%= @destination.descripcion %></dd>
+        </dl>
+        <p class="destination-cost text-right">Costo: <%= @destination.costo %></p>
       </div>
+    </div>
     </div>
   </div>
 </section>

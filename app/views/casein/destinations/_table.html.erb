@@ -13,7 +13,7 @@
 	<% destinations.each do |destination| %>
 		<tr>
 			<td><%= casein_table_cell_link destination.nombre, casein_destination_path(destination) %></td>
-			<td><%= casein_table_cell_link destination.descripcion, casein_destination_path(destination) %></td>
+			<td><%= casein_table_cell_link destination.descripcion, casein_destination_path(destination), casein_truncate: 40 %></td>
 			<td><%= casein_table_cell_link destination.costo, casein_destination_path(destination) %></td>
 			<td class="delete">
 				<%= link_to(casein_show_row_icon("trash"), casein_destination_path(destination), :method => :delete, :data => { :confirm => "Esta seguro que quiere elminar este destino?" }) %>

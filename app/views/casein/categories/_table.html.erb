@@ -12,7 +12,7 @@
 	<% categories.each do |category| %>
 		<tr>
 			<td><%= casein_table_cell_link category.nombre, casein_category_path(category) %></td>
-			<td><%= casein_table_cell_link category.descripcion, casein_category_path(category) %></td>
+			<td><%= casein_table_cell_link category.descripcion, casein_category_path(category), casein_truncate: 40 %></td>
 			<td class="delete">
 				<%= link_to(casein_show_row_icon("trash"), casein_category_path(category), :method => :delete, :data => { :confirm => "Esta seguro que quiere eliminar esta categoría?" }) %>
 			</td>
