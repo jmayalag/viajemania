@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150703152315) do
+ActiveRecord::Schema.define(version: 20150703165036) do
 
   create_table "casein_admin_users", force: :cascade do |t|
     t.string   "login",                           null: false
@@ -53,9 +53,13 @@ ActiveRecord::Schema.define(version: 20150703152315) do
     t.string   "link"
     t.integer  "costo"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "imagen"
+    t.string   "imagen_file_name"
+    t.string   "imagen_content_type"
+    t.integer  "imagen_file_size"
+    t.datetime "imagen_updated_at"
   end
 
   add_index "destinations", ["category_id"], name: "index_destinations_on_category_id"

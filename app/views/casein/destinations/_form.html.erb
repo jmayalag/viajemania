@@ -21,7 +21,13 @@
 
 <div class="row">
 	<div class="col-lg-6">
-		<%= casein_url_field f, f.object, :imagen %>
+		<%# casein_url_field f, f.object, :imagen %>
+    <div class='form-group'><label class="control-label" for="slide_img">Imagen</label>
+      <div class='well'>
+        <%= image_tag @destination.imagen, width: '250px', class:'center-block' %>
+        <%= f.file_field :imagen, class:'form-control' %>
+      </div>
+    </div>
 	</div>
 	<div class="col-lg-6">
     <%= casein_collection_select f, f.object, :destination, :category_id, Category.all, :id, :nombre, {:prompt => 'Seleccionar categoría'} %>
