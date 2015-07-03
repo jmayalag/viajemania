@@ -4,7 +4,7 @@
 	<thead>
 		<tr>
 			<th><%= casein_sort_link "Nombre", :nombre %></th>
-			<th><%= casein_sort_link "Imagen", :imagen %></th>
+			<th><%= casein_sort_link "Subtitulo", :subtitulo %></th>
 			<th>&nbsp;</th>
 		</tr>
 	</thead>
@@ -12,7 +12,7 @@
 	<% slides.each do |slide| %>
 		<tr>
 			<td><%= casein_table_cell_link slide.nombre, casein_slide_path(slide) %></td>
-			<td><%= casein_table_cell_link slide.imagen, casein_slide_path(slide) %></td>
+			<td><%= casein_table_cell_link slide.subtitulo, casein_slide_path(slide) %></td>
 			<td class="delete">
 				<%= link_to(casein_show_row_icon("trash"), casein_slide_path(slide), :method => :delete, :data => { :confirm => "Are you sure you want to delete this slide?" }) %>
 			</td>
