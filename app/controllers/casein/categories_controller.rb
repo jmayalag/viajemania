@@ -2,7 +2,7 @@
 
 module Casein
   class CategoriesController < Casein::CaseinController
-    before_action :set_category, only: [:show, :edit, :update, :destroy]
+    before_action :set_category, only: [:show, :update, :destroy]
     ## optional filters for defining usage according to Casein::AdminUser access_levels
     # before_filter :needs_admin, :except => [:action1, :action2]
     # before_filter :needs_admin_or_current_user, :only => [:action1, :action2]
@@ -13,11 +13,11 @@ module Casein
     end
   
     def show
-      @casein_page_title = 'View category'
+      @casein_page_title = 'Ver categoría'
     end
   
     def new
-      @casein_page_title = 'Add a new category'
+      @casein_page_title = 'Agregar nueva categoría'
     	@category = Category.new
     end
 
@@ -25,10 +25,10 @@ module Casein
       @category = Category.new category_params
     
       if @category.save
-        flash[:notice] = 'Category created'
+        flash[:notice] = 'Categoría creada'
         redirect_to casein_categories_path
       else
-        flash.now[:warning] = 'There were problems when trying to create a new category'
+        flash.now[:warning] = 'Se encontraron problemas al crear nueva categoría'
         render :action => :new
       end
     end
