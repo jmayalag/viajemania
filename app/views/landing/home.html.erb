@@ -24,7 +24,7 @@
           <div class="col-lg-12 text-center">
             <h5 class="package-title"><%= category.nombre %></h5>
             <div class="row">
-              <%= render category.destinations %>
+              <%= render category.destinations.where(mostrar_en_portada: true).limit(4) %>
             </div>
           </div>
           <%= link_to "Ver otros paquetes...", landing_category_path(category), class: "package-link" %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150703184756) do
+ActiveRecord::Schema.define(version: 20150703191643) do
 
   create_table "casein_admin_users", force: :cascade do |t|
     t.string   "login",                           null: false
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20150703184756) do
     t.integer  "front_image_file_size"
     t.datetime "front_image_updated_at"
     t.string   "descripcion_corta"
+    t.boolean  "mostrar_en_portada"
   end
 
   add_index "destinations", ["category_id"], name: "index_destinations_on_category_id"

@@ -1,7 +1,7 @@
 class LandingController < ApplicationController
   def home
     @categories = Category.all
-    @contents = Destination.all
+    @contents = Destination.where(mostrar_en_portada: true).limit(4)
     @slides = Slide.all
   end
 
