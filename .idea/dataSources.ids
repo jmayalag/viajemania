@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails viajemania: development" uuid="effaf5ed-9ce7-4755-9886-75ade1cb3e08">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="casein_admin_users" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="login" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="access_level" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="crypted_password" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="password_salt" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="persistence_token" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="single_access_token" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="perishable_token" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="login_count" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="failed_login_count" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="last_request_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="current_login_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="last_login_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="current_login_ip" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="last_login_ip" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="time_zone" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="categories" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="nombre" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="descripcion" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="slug" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="mostrar_en_portada" sqlType="BOOLEAN" precision="2000000000" scale="10" nullable="true" jdbcType="4" def="J2Yn"/>
+      <column name="orden" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key columns="id"/>
+      <index name="index_categories_on_slug" unique="true" columns="slug"/>
+      <index name="index_categories_on_nombre" unique="true" columns="nombre"/>
+    </table>
+    <table name="destinations" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="nombre" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="descripcion" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="slug" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="link" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="costo" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="category_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="imagen" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="imagen_file_name" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="imagen_content_type" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="imagen_file_size" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="imagen_updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="front_image_file_name" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="front_image_content_type" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="front_image_file_size" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="front_image_updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="descripcion_corta" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="mostrar_en_portada" sqlType="BOOLEAN" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <index name="index_destinations_on_slug" unique="true" columns="slug"/>
+      <index name="index_destinations_on_category_id" unique="true" columns="category_id"/>
+    </table>
+    <table name="friendly_id_slugs" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="slug" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="sluggable_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="sluggable_type" sqlType="VARCHAR(50)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_friendly_id_slugs_on_sluggable_type" unique="true" columns="sluggable_type"/>
+      <index name="index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" unique="true" columns="slug,sluggable_type,scope"/>
+      <index name="index_friendly_id_slugs_on_slug_and_sluggable_type" unique="true" columns="slug,sluggable_type"/>
+      <index name="index_friendly_id_slugs_on_sluggable_id" unique="true" columns="sluggable_id"/>
+    </table>
+    <table name="schema_migrations" schema="" catalog="" type="TABLE">
+      <column name="version" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <index name="unique_schema_migrations" unique="true" columns="version"/>
+    </table>
+    <table name="slides" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="nombre" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="subtitulo" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="img_file_name" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="img_content_type" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="img_file_size" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="img_updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="orden" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+    </table>
+  </data-source>
+</component>
