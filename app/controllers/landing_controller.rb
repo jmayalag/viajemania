@@ -1,7 +1,6 @@
 class LandingController < ApplicationController
   def home
-    @categories = Category.all
-    @contents = Destination.where(mostrar_en_portada: true).limit(4)
+    @categories = Category.where(mostrar_en_portada: true).order(:id)
     @slides = Slide.all
   end
 

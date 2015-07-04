@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150703191643) do
+ActiveRecord::Schema.define(version: 20150703235829) do
 
   create_table "casein_admin_users", force: :cascade do |t|
     t.string   "login",                           null: false
@@ -39,8 +39,10 @@ ActiveRecord::Schema.define(version: 20150703191643) do
     t.string   "nombre"
     t.text     "descripcion"
     t.string   "slug"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.boolean  "mostrar_en_portada", default: false
+    t.integer  "orden",              default: 0
   end
 
   add_index "categories", ["nombre"], name: "index_categories_on_nombre", unique: true
@@ -86,13 +88,14 @@ ActiveRecord::Schema.define(version: 20150703191643) do
 
   create_table "slides", force: :cascade do |t|
     t.string   "nombre"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "subtitulo"
     t.string   "img_file_name"
     t.string   "img_content_type"
     t.integer  "img_file_size"
     t.datetime "img_updated_at"
+    t.integer  "orden",            default: 0
   end
 
 end

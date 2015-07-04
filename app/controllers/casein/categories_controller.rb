@@ -58,7 +58,7 @@ module Casein
       end
 
       def category_params
-        params.require(:category).permit(:nombre, :descripcion)
+        params.require(:category).permit(:nombre, :descripcion, :mostrar_en_portada, :orden)
       end
 
   end

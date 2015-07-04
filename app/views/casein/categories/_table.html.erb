@@ -3,6 +3,7 @@
 <table class="table table-striped table-hover table-condensed">
 	<thead>
 		<tr>
+      <th><%= casein_sort_link "Orden", :orden %></th>
 			<th><%= casein_sort_link "Nombre", :nombre %></th>
 			<th><%= casein_sort_link "Descripcion", :descripcion %></th>
 			<th>&nbsp;</th>
@@ -11,6 +12,7 @@
 	
 	<% categories.each do |category| %>
 		<tr>
+      <td><%= casein_table_cell_link category.orden, casein_category_path(category) %></td>
 			<td><%= casein_table_cell_link category.nombre, casein_category_path(category) %></td>
 			<td><%= casein_table_cell_link category.descripcion, casein_category_path(category), casein_truncate: 40 %></td>
 			<td class="delete">

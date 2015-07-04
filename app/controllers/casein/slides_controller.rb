@@ -58,7 +58,7 @@ module Casein
       end
 
       def slide_params
-        params.require(:slide).permit(:nombre, :img, :subtitulo)
+        params.require(:slide).permit(:nombre, :img, :subtitulo, :orden)
       end
 
   end
