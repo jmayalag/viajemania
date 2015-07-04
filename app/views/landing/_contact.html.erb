@@ -46,41 +46,29 @@
 </section>
   <!-- Map Section -->
   <!--<div id="map-canvas"></div>-->
-  <div id="map"></div>
+  <!--<div id="map"></div>-->
   <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<!--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY4SBhYmg67mC6-e8P6XXzRYLSUCbbI40">-->
+<section id="canvas1">
+  <iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Quebracho,+Asuncion,+Central,+Paraguay&key=AIzaSyCY4SBhYmg67mC6-e8P6XXzRYLSUCbbI40"></iframe>
+</section>
 
 <% content_for :javascript do %>
-    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY4SBhYmg67mC6-e8P6XXzRYLSUCbbI40&sensor=false"></script>-->
+    <script>
+        $(document).ready(function () {
 
-    <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY4SBhYmg67mC6-e8P6XXzRYLSUCbbI40">
-    </script>
-    <script type="text/javascript">
-        function initialize() {
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 15,
+            // you want to enable the pointer events only on click;
 
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(-25.321859, -57.576613),
-
-                // Disables the default Google Maps UI components
-                disableDefaultUI: false,
-                scrollwheel: false,
-                draggable: true
-            };
-            var map = new google.maps.Map(document.getElementById('map'),
-                    mapOptions);
-
-//            var image = '<%= asset_path '04_ICON_direccion.png' %>'
-
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(-25.321859, -57.576613),
-                map: map,
-                title: 'Hello World!',
-//                icon: image
+            $('#map').addClass('scrolloff'); // set the pointer events to none on doc ready
+            $('#canvas1').on('click', function () {
+                $('#map').removeClass('scrolloff'); // set the pointer events true on click
             });
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
+
+            // you want to disable pointer events when the mouse leave the canvas area;
+
+            $("#map").mouseleave(function () {
+                $('#map').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
+            });
+        });
     </script>
 <% end %>
