@@ -1,6 +1,6 @@
 module LandingHelper
   def categories_list()
-    Category.all
+    Category.all.order(:orden)
   end
 
   def calculate_offset(count)
