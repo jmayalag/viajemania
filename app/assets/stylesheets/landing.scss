@@ -10,7 +10,8 @@
 $blue-sky: #4471b5;
 $red-light: #c4007a;
 $red-lighter: #f60078;
-$yellow-light: #ffdb00;
+$yellow-light: #c8a500;
+$yellow-lighter: #ffdb00;
 
 body {
   width: 100%;
@@ -55,7 +56,7 @@ p {
 }
 
 a {
-  color: #42dca3;
+  color: $yellow-lighter;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -64,7 +65,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: $yellow-light;
 }
 
 .light {
@@ -390,7 +391,7 @@ a:focus {
   }
 
   .thumbnail {
-    background-color: $yellow-light;
+    background-color: $yellow-lighter;
     display: inline-block;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     border-top-color: $red-light;
