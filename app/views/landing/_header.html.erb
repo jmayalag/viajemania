@@ -19,16 +19,18 @@
         </li>
         <% if current_page?(action: :home) %>
             <li><a class="page-scroll text-center" href="#about">Nosotros</a></li>
+        <% elsif current_page?(action: :about) %>
+            <li class="active"><a class="page-scroll text-center" href="#content">Nosotros</a></li>
         <% else %>
-            <%= content_tag :li, link_to('Nosotros', about_path, class: "page-scroll text-center") %>
+            <%= content_tag :li, link_to('Nosotros', about_url, class: "page-scroll text-center") %>
         <% end %>
         <% categories_list.each do |category| %>
             <% if current_page?(action: :home) && category.mostrar_en_portada? %>
                 <li><%= link_to category.nombre, "#packages-#{category.slug}", class: "page-scroll text-center" %></li>
             <% elsif @category && @category.id == category.id %>
-                <li class="active"><%= link_to category.nombre, "#packages-#{category.slug}", class: "page-scroll text-center" %></li>
+                <li class="active"><%= link_to category.nombre, "#content", class: "page-scroll text-center" %></li>
             <% else %>
-                <li><%= link_to category.nombre, landing_category_path(category), class: "page-scroll text-center" %></li>
+                <li><%= link_to category.nombre, landing_category_url(category), class: "page-scroll text-center" %></li>
             <% end %>
         <% end %>
         <li>
