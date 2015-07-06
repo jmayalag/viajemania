@@ -7,6 +7,9 @@
       <div class="col-lg-12 text-center">
         <h1 class="package-title"><%= @category.nombre %></h1>
         <div class="row">
+          <% if @category.destinations.empty? %>
+            <%= image_tag "http://placehold.it/600x500" %>
+          <% end %>
           <%# calculate_offset(category.front_destinations.count) %>
           <%= render @category.destinations %>
         </div>
