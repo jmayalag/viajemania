@@ -333,6 +333,7 @@ a:focus {
 
   .package-link {
     color: white;
+    font-size: 16px;
     //line-height: 40px;
     padding: 5px 10px;
     margin: 10px 25px;
@@ -390,6 +391,7 @@ a:focus {
 
   .package-link {
     color: white;
+    font-size: 16px;
     //line-height: 40px;
     padding: 5px 10px;
     margin: 10px 25px;
@@ -755,6 +757,20 @@ footer {
   margin: 20px 0px;
   display: inline-block;
   background: $blue-sky;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.about-link {
+  color: white;
+  //line-height: 40px;
+  padding: 5px 10px;
+  margin: 20px 0px;
+  display: inline-block;
+  background: $red-lighter;
 
   &:hover {
     text-decoration: none;

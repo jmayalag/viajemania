@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'landing#home'
 
+  get 'about' => 'landing#about'
   get 'category/:id' => 'landing#category', as: 'landing_category'
   get 'destination/:id' => 'landing#destination', as: 'landing_destination'
 

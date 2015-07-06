@@ -1,5 +1,5 @@
 module LandingHelper
-  def categories_list()
+  def categories_list
     Category.all.order(:orden)
   end
 
@@ -14,5 +14,9 @@ module LandingHelper
       else
         'col-lg-0 col-lg-offset-3'
     end
+  end
+
+  def sliders_list
+    Slide.all.order(:orden)
   end
 end

@@ -18,18 +18,18 @@
           <a href="#page-top"></a>
         </li>
         <% if current_page?(action: :home) %>
-        <li><a class="page-scroll text-center" href="#about">Nosotros</a></li>
+            <li><a class="page-scroll text-center" href="#about">Nosotros</a></li>
         <% else %>
-        <li><a class="page-scroll text-center" href="/#about">Nosotros</a></li>
+            <%= content_tag :li, link_to('Nosotros', about_path, class: "page-scroll text-center") %>
         <% end %>
         <% categories_list.each do |category| %>
-          <% if current_page?(action: :home) && category.mostrar_en_portada? %>
-            <li><%= link_to category.nombre, "#packages-#{category.slug}", class: "page-scroll text-center" %></li>
-          <% elsif @category && @category.id == category.id %>
-            <li class="active"><%= link_to category.nombre, "#packages-#{category.slug}", class: "page-scroll text-center" %></li>
-          <% else %>
-            <li><%= link_to category.nombre, landing_category_path(category), class: "page-scroll text-center" %></li>
-          <% end %>
+            <% if current_page?(action: :home) && category.mostrar_en_portada? %>
+                <li><%= link_to category.nombre, "#packages-#{category.slug}", class: "page-scroll text-center" %></li>
+            <% elsif @category && @category.id == category.id %>
+                <li class="active"><%= link_to category.nombre, "#packages-#{category.slug}", class: "page-scroll text-center" %></li>
+            <% else %>
+                <li><%= link_to category.nombre, landing_category_path(category), class: "page-scroll text-center" %></li>
+            <% end %>
         <% end %>
         <li>
           <a class="page-scroll text-center" href="#contact">Contacto</a>
