@@ -1,11 +1,11 @@
 <!-- Intro Header -->
 <header class="intro">
   <div class="intro-body">
-      <div id="carousel-example-generic" class="carousel slide">
+      <div id="carousel-example-generic" class="carousel fade">
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-          <% @slides.each_with_index do |slide, i| %>
-              <div class="<%= i == 0 ? "item active" : "item" %>">
+          <% @slides.each do |slide| %>
+              <div class="item">
                 <%= image_tag slide.img, class: "img-responsive img-full" %>
                 <div class="carousel-caption">
                   <h1><%= slide.nombre %></h1>
@@ -37,7 +37,7 @@
     <script>
         $(document).ready(function(){
             $('.carousel').carousel();
-//            $('.carousel-inner .item:first').addClass('active');
+            $('.carousel-inner .item:first').addClass('active');
         });
     </script>
 <% end %>
