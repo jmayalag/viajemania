@@ -35,8 +35,25 @@
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
   .carousel-inner > .item > img {
     max-width: 100%;
+  }
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%; /* pushes the icon in the middle of the height */
+  z-index: 5;
+  display: inline-block;
+  background-image: none !important;
+  bottom: inherit;
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-control {
+    img {
+      max-width: 30px !important;
+    }
   }
 }
