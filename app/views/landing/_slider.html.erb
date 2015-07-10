@@ -10,7 +10,7 @@
                 <div class="carousel-caption">
                   <h1><%= slide.nombre %></h1>
                   <p class="carousel-subtitle"><%= slide.subtitulo %></p><br>
-                  <a id="circle" href="#about" class="btn page-scroll">
+                    <a id="circle" href="<% current_page?(action: :home) ? '#about' : '#content' %>" class="btn page-scroll">
                     <!--<i class="fa fa-angle-double-down animated"></i>-->
                     <%= image_tag '04_ICON_flechita.png', class: "img-responsive center-block" %>
                   </a>
