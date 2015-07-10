@@ -79,11 +79,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address:              'smtp.gmail.com',
-      port:                 587,
-      domain:               'gmail.com',
-      user_name:            'projectium15',
-      password:             'projectium123',
+      address:              'server1.prodominios.com',
+      port:                 465,
+      domain:               'viajemania.com.py',
+      user_name:            'adminmegusta',
+      password:             '0viaje1mania2.',
       authentication:       'plain',
       enable_starttls_auto: true  }
 
