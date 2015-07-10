@@ -83,7 +83,7 @@ Rails.application.configure do
       port:                 465,
       domain:               'viajemania.com.py',
       user_name:            'adminmegusta',
-      password:             '0viaje1mania2.',
+      password:             ENV['EMAIL_PASSWORD'],
       authentication:       'plain',
       enable_starttls_auto: true  }
 
