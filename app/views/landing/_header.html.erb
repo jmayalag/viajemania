@@ -20,7 +20,7 @@
         <% if current_page?(action: :home) %>
             <li><a class="page-scroll text-center" href="#about">Nosotros</a></li>
         <% elsif current_page?(action: :about) %>
-            <li class="active"><a class="page-scroll text-center" href="#content">Nosotros</a></li>
+            <li class="active"><a class="page-scroll text-center" href="#about">Nosotros</a></li>
         <% else %>
             <%= content_tag :li, link_to('Nosotros', about_url, class: "page-scroll text-center") %>
         <% end %>
