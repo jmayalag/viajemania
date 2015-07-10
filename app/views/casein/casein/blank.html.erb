@@ -1,12 +1,22 @@
-<br />
-<br />
+<br/>
+<br/>
 <div class="container">
   <div class="jumbotron" style="text-align: center;">
-    <h1>Bienvenido to Casein</h1>
-    <br />
-    <p>You&rsquo;re ready to begin scaffolding and customizing!</p>
-    <p><small style="font-size: 0.7em;">To remove this screen, set <code>casein_config_dashboard_url</code></small></p>
-    <br />
-    <p><a href="https://github.com/russellquinn/casein/blob/master/README.rdoc" class="btn btn-primary btn-lg">View README on GitHub</a></p>
+    <h1>Bienvenido <%= @session_user.name %></h1>
+    <br/>
+
+    <p>Puede empezar a agregar contenido a su página.</p>
+
+    <p>
+      <small style="font-size: 0.7em;">Seleccione una de las opciones para empezar.</small>
+    </p>
+    <br/>
+
+    <p><div class="btn-group btn-group-lg btn-group-justified">
+      <a href="<%= casein_slides_path %>" class="btn btn-primary">Slides</a>
+      <a href="<%= casein_categories_path %>" class="btn btn-primary">Categorías</a>
+      <a href="<%= casein_destinations_path %>" class="btn btn-primary">Destinos</a>
+    </div></p>
+    <p><a href="<%= root_path %>" class="btn btn-primary btn-lg">Ver Página</a></p>
   </div>
 </div>
