@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'casein', '~>5.1.1'
+gem 'casein', path: 'vendor/gems/casein'
 gem 'friendly_id', '~> 5.1.0'
 gem 'paperclip', '~> 4.3'
 gem 'aws-sdk', '~> 1.6'

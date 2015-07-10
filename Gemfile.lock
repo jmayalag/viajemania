@@ -1,3 +1,14 @@
+PATH
+  remote: vendor/gems/casein
+  specs:
+    casein (5.1.1.5)
+      authlogic (= 3.4.4)
+      bootstrap-sass (= 3.3.3)
+      jquery-rails
+      sass-rails
+      scrypt (= 1.2.1)
+      will_paginate (= 3.0.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -58,13 +69,6 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
-    casein (5.1.1.5)
-      authlogic (= 3.4.4)
-      bootstrap-sass (= 3.3.3)
-      jquery-rails
-      sass-rails
-      scrypt (= 1.2.1)
-      will_paginate (= 3.0.7)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -203,7 +207,7 @@ DEPENDENCIES
   aws-sdk (~> 1.6)
   bootstrap-sass
   byebug
-  casein (~> 5.1.1)
+  casein!
   coffee-rails (~> 4.1.0)
   font-awesome-rails (~> 4.1.0.0)
   friendly_id (~> 5.1.0)
@@ -224,4 +228,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.3
+   1.10.5
