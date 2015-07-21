@@ -323,12 +323,12 @@ a:focus {
   -o-background-size: auto;
 
   .package-title {
-    color: $red-lighter;
+    color: white;
     font-family: "Lato";
     //line-height: 40px;
     padding: 6px 6px;
     display: inline-block;
-    background: white;
+    background: $red-lighter;
   }
 
   .package-link {
@@ -527,6 +527,9 @@ body {
 .about-text {
   font-family: "Open Sans", sans-serif;
   color: $blue-sky;
+  p {
+    font-size: 16px;
+  }
 }
 
 /* Slides */
@@ -777,4 +780,8 @@ footer {
     text-decoration: none;
     color: white;
   }
+}
+
+.social-icon {
+  padding: 5px;
 }

@@ -4,17 +4,17 @@
 
 <%= form_for @category, :url => casein_category_path(@category) do |f| %>
 
-	<%= render :partial => 'casein/categories/form', :locals => { :f => f } %>
-	<%= render :partial => 'casein/destinations/table', :locals => {:destinations => @category.destinations} %>
+    <%= render :partial => 'casein/categories/form', :locals => {:f => f} %>
+    <%= render :partial => 'casein/destinations/table', :locals => {:destinations => @category.destinations} %>
 
-	<p class="submits">
-	  	<%= link_to 'Cancelar', casein_categories_path, :class => 'btn btn-mini btn-danger' %>
-		<%= f.submit "Guardar cambios", :class => "btn btn-mini btn-primary" %>
-	</p>
+    <p class="submits">
+      <%= link_to 'Cancelar', casein_categories_path, :class => 'btn btn-mini btn-danger' %>
+      <%= f.submit "Guardar cambios", :class => "btn btn-mini btn-primary" %>
+    </p>
 
 <% end %>
 
 <%= content_for :sidebar do %>
-	<li><%= link_to "#{casein_show_icon "th-list"}Volver a lista".html_safe, casein_categories_path %></li>
-  <li><%= link_to "#{casein_show_icon "plus"}Agregar destino".html_safe, casein_destination_to_category_path(@category) %></li>
+    <li><%= link_to "#{casein_show_icon "th-list"}Volver a lista".html_safe, casein_categories_path %></li>
+    <!--<li><%# link_to "#{casein_show_icon "plus"}Agregar destino".html_safe, casein_destination_to_category_path(@category) %></li>-->
 <% end %>
