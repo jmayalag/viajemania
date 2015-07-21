@@ -6,6 +6,7 @@
         <div class="carousel-inner">
           <% sliders_list.each do |slide| %>
               <div class="item">
+                <div class="filter"></div>
                 <%= image_tag slide.img, class: "img-responsive img-full" %>
                 <div class="carousel-caption">
                   <h1><%= slide.nombre %></h1>
