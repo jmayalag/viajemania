@@ -30,7 +30,7 @@
             <% elsif @category && @category.id == category.id %>
                 <li class="active"><%= link_to category.nombre, "#content", class: "page-scroll text-center" %></li>
             <% else %>
-                <li><%= link_to category.nombre, landing_category_url(category), class: "page-scroll text-center" %></li>
+                <li><%= link_to category.nombre, "#{landing_category_url(category)}#content", class: "page-scroll text-center" %></li>
             <% end %>
         <% end %>
         <li>
