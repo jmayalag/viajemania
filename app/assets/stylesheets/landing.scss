@@ -352,6 +352,11 @@ a:focus {
     overflow-x: hidden;
     overflow-y: hidden;
 
+    img {
+      height: 130px;
+      width: 100%;
+    }
+
     .caption {
       padding: 10px 20px;
     }
@@ -410,6 +415,75 @@ a:focus {
     width: 242px;
     overflow-x: hidden;
     overflow-y: hidden;
+
+    img {
+      height: 130px;
+      width: 100%;
+    }
+
+    .caption {
+      padding: 10px 20px;
+    }
+
+    h3 {
+      font-family: 'Lato';
+      text-transform: uppercase;
+      border-bottom: 2px inset $gray-light;
+      padding-bottom: 10px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
+}
+
+.package-section-estudiantil {
+  width: 100%;
+  padding: 50px 0;
+  color: #fff;
+  //background: image_url("03_Pattern_FondoInternacionales.jpg") repeat center center scroll;
+  background-color: white;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: auto;
+  -o-background-size: auto;
+
+  .package-title {
+    color: white;
+    font-family: "Lato";
+    //line-height: 40px;
+    padding: 6px 6px;
+    display: inline-block;
+    background: $red-lighter;
+  }
+
+  .package-link {
+    color: white;
+    font-size: 16px;
+    //line-height: 40px;
+    padding: 5px 10px;
+    margin: 10px 25px;
+    display: inline-block;
+    background: $red-lighter;
+  }
+
+  .thumbnail {
+    background-color: $yellow-lighter;
+    display: inline-block;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-top-color: $red-light;
+    border-bottom-color: $red-light;
+    padding: 0px;
+    height: 350px;
+    width: 242px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    img {
+      height: 130px;
+      width: 100%;
+    }
 
     .caption {
       padding: 10px 20px;

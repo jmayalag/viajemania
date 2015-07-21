@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721172318) do
+ActiveRecord::Schema.define(version: 20150721181411) do
 
   create_table "casein_admin_users", force: :cascade do |t|
     t.string   "login",                           null: false
@@ -39,10 +39,11 @@ ActiveRecord::Schema.define(version: 20150721172318) do
     t.string   "nombre"
     t.text     "descripcion"
     t.string   "slug"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",                                            null: false
+    t.datetime "updated_at",                                            null: false
     t.boolean  "mostrar_en_portada", default: false
     t.integer  "orden",              default: 0
+    t.string   "style_class",        default: "package-section-altern"
   end
 
   add_index "categories", ["nombre"], name: "index_categories_on_nombre", unique: true
