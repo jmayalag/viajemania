@@ -4,26 +4,28 @@
 <div class="row">
   <div class="col-lg-1">
     <%= casein_check_box f, f.object, :mostrar_en_portada, casein_label: 'Portada?' %>
-	</div>
-  <div class="col-lg-4">
+  </div>
+  <div class="col-lg-3">
     <%= casein_text_field f, f.object, :nombre %>
   </div>
-  <div class="col-lg-4">
+  <div class="col-lg-3">
     <%= casein_collection_select f, f.object, :destination, :category_id, Category.all, :id, :nombre, {:prompt => 'Seleccionar categoría'} %>
   </div>
-	<div class="col-lg-3">
+  <div class="col-lg-3">
     <%= casein_number_field f, f.object, :costo %>
-
-	</div>
+  </div>
+  <div class="col-lg-2">
+    <%= casein_select f, f.object, :moneda, options_for_select([["Dolares", "$"], ["Guaranies", "₲"], ["Euros", "€"]]) %>
+  </div>
 </div>
 
 <div class="row">
-	<div class="col-lg-6">
+  <div class="col-lg-6">
     <%= casein_text_field f, f.object, :descripcion_corta, casein_label: 'Descripción Corta (hasta 40 caracteres)' %>
-	</div>
-	<div class="col-lg-6">
+  </div>
+  <div class="col-lg-6">
     <%= casein_url_field f, f.object, :link %>
-	</div>
+  </div>
   <div class="col-lg-12">
     <%= casein_text_area f, f.object, :descripcion %>
   </div>
@@ -32,23 +34,25 @@
 <div class="row">
   <div class="col-lg-6">
     <div class='form-group'><label class="control-label" for="slide_img">Portada</label>
+
       <div class='well'>
         <% if @destination.front_image.url %>
-            <%= image_tag @destination.front_image, width: '250px', class:'center-block' %>
+            <%= image_tag @destination.front_image, width: '250px', class: 'center-block' %>
         <% end %>
-        <%= f.file_field :front_image, class:'form-control' %>
+        <%= f.file_field :front_image, class: 'form-control' %>
       </div>
     </div>
   </div>
 
-	<div class="col-lg-6">
+  <div class="col-lg-6">
     <div class='form-group'><label class="control-label" for="slide_img">Imagen</label>
+
       <div class='well'>
         <% if @destination.imagen.url %>
-            <%= image_tag @destination.imagen, width: '250px', class:'center-block' %>
+            <%= image_tag @destination.imagen, width: '250px', class: 'center-block' %>
         <% end %>
-        <%= f.file_field :imagen, class:'form-control' %>
+        <%= f.file_field :imagen, class: 'form-control' %>
       </div>
     </div>
-	</div>
+  </div>
 </div>
