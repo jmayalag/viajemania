@@ -3,37 +3,17 @@
   -webkit-perspective: 1000;
 }
 
-//.carousel {
-//  margin-bottom: 0px;
-//
-//  /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-//  margin-top: 0px;
-//}
-///* Since positioning the image, we need to help out the caption */
-//.carousel-caption {
-//  z-index: 10;
-//}
-//
-///* Declare heights because of positioning of img element */
-//.carousel .item {
-//  //height: 400px;
-//  //margin-top:-10px;
-//  background-color: #ccc;
-//}
-//.carousel-inner > .item > img {
-//  //position: absolute;
-//  //top: 0;
-//  //left: 0;
-//  min-width: 100%;
-//  //height: 400px;
-//}
-
 @-moz-document url-prefix() {
   .carousel-inner > .item > img {
     width: 100%;
     max-width: 100%;
   }
 }
+
+//.carousel-inner > .item > img {
+//  width: 100%;
+//  max-width: 100%;
+//}
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .carousel-inner > .item > img {

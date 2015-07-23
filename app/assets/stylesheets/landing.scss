@@ -18,9 +18,6 @@ body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
   padding-top: 70px;
-  //color: #fff;
-  //background-color: #000;
-  //-webkit-font-smoothing: subpixel-antialiased
 }
 
 html {
@@ -35,7 +32,6 @@ h4,
 h5,
 h6 {
   margin: 0 0 35px;
-  //text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
@@ -140,9 +136,9 @@ a:focus {
   color: #fff;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 1366px) {
   .navbar-custom {
-    padding: 20px 0;
+    padding: 10px 0;
     border-bottom: 0;
     letter-spacing: 1px;
     background: 0 0;
@@ -170,7 +166,7 @@ a:focus {
   //padding: 100px 0;
   text-align: center;
   color: #fff;
-  //background: image_url("intro-bg.jpg") no-repeat bottom center scroll;
+  background: no-repeat bottom center scroll;
   //background-color: #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -347,7 +343,7 @@ a:focus {
     border-bottom-color: $red-light;
     padding: 0px;
     height: 350px;
-    width: 242px;
+    width: 240px;
     overflow-x: hidden;
     overflow-y: hidden;
 
@@ -411,7 +407,7 @@ a:focus {
     border-bottom-color: $red-light;
     padding: 0px;
     height: 350px;
-    width: 242px;
+    width: 240px;
     overflow-x: hidden;
     overflow-y: hidden;
 
@@ -475,7 +471,7 @@ a:focus {
     border-bottom-color: $red-light;
     padding: 0px;
     height: 350px;
-    width: 242px;
+    width: 240px;
     overflow-x: hidden;
     overflow-y: hidden;
 
@@ -507,7 +503,7 @@ a:focus {
   margin-top: 0px;
 }
 
-@media(min-width: 767px) {
+@media(min-width: 768px) {
   .contact-section {
     padding: 50px 50px;
   }
@@ -549,28 +545,6 @@ a:focus {
   outline: 0;
   color: #000;
   background-color: #42dca3;
-}
-
-ul.banner-social-buttons {
-  margin-top: 0;
-}
-
-@media(max-width: 1199px) {
-  ul.banner-social-buttons {
-    margin-top: 15px;
-  }
-}
-
-@media(max-width: 767px) {
-  ul.banner-social-buttons li {
-    display: block;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-
-  ul.banner-social-buttons li:last-child {
-    margin-bottom: 0;
-  }
 }
 
 ::-moz-selection {
@@ -624,7 +598,8 @@ div.filter{
 /* Slides */
 .img-full {
   //max-height: 500px;
-  min-width: 100%;
+  width: 100%;
+  height: auto;
   //width: auto;
   //height: 225px;
   //max-height: 225px;
@@ -809,7 +784,7 @@ footer {
   }
 }
 
-@media(min-width: 1200px) {
+@media(min-width: 768px) {
   .middle-contact {
     border-left: 2px solid white;
     border-right: 2px solid white;
