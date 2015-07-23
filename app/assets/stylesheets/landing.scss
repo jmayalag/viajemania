@@ -147,6 +147,18 @@ a:focus {
     -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
     transition: background .5s ease-in-out, padding .5s ease-in-out;
   }
+}
+
+@media(min-width: 768px) {
+  .navbar-custom {
+    padding: 10px 0;
+    border-bottom: 0;
+    background: 0 0;
+    font-weight: 500;
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+  }
 
   .navbar-custom.top-nav-collapse {
     padding: 0;
@@ -193,7 +205,7 @@ a:focus {
 
 @media(min-width: 768px) {
   .intro {
-    height: 100%;
+    height: auto;
     padding: 0;
   }
 
@@ -292,7 +304,8 @@ a:focus {
 .contact-section {
   width: 100%;
   //margin-top: 70px;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+  padding-top: 25px;
   color: white;
   background-color: $blue-sky;
   -webkit-background-size: cover;
