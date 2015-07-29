@@ -63,7 +63,7 @@ module Casein
     end
 
     def destination_params
-      params.require(:destination).permit(:nombre, :descripcion, :link, :costo,
+      params.require(:destination).permit(:nombre, :descripcion, :costo,
                                           :imagen, :category_id, :front_image,
                                           :descripcion_corta, :mostrar_en_portada, :moneda)
     end
