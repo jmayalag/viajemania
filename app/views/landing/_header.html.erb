@@ -25,7 +25,7 @@
             <%= content_tag :li, link_to('Nosotros', about_url, class: "page-scroll text-center") %>
         <% end %>
         <% categories_list.each do |category| %>
-            <% if current_page?(action: :home) && category.mostrar_en_portada? %>
+            <% if current_page?(action: :home) && category.mostrar_en_portada? && !category.front_destinations.empty?%>
                 <li><%= link_to category.nombre, "#packages-#{category.slug}", class: "page-scroll text-center" %></li>
             <% elsif @category && @category.id == category.id %>
                 <li class="active"><%= link_to category.nombre, "#content", class: "page-scroll text-center" %></li>

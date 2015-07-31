@@ -9,12 +9,11 @@
         <div class="row">
           <% if @category.destinations.empty? %>
             <%= render 'landing/empty' %>
+          <% else %>
+            <%= render @category.destinations %>
           <% end %>
-          <%# calculate_offset(category.front_destinations.count) %>
-          <%= render @category.destinations %>
         </div>
       </div>
-      <%# content_tag :h4, link_to("Ver otros paquetes...", landing_category_path(category), class: "package-link pull-right") %>
     </div>
   </div>
 </section>
