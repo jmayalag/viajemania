@@ -450,7 +450,6 @@ a:focus {
   width: 100%;
   padding: 50px 0;
   color: #fff;
-  //background: image_url("03_Pattern_FondoInternacionales.jpg") repeat center center scroll;
   background-color: white;
   -webkit-background-size: auto;
   -moz-background-size: auto;
@@ -473,11 +472,11 @@ a:focus {
     padding: 5px 10px;
     margin: 10px 25px;
     display: inline-block;
-    background: $red-lighter;
+    background: $blue-sky;
   }
 
   .thumbnail {
-    background-color: $yellow-lighter;
+    background-color: $blue-sky;
     display: inline-block;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     border-top-color: $red-light;
@@ -494,13 +493,14 @@ a:focus {
     }
 
     .caption {
+      color: white;
       padding: 10px 20px;
     }
 
     h3 {
       font-family: 'Lato';
       text-transform: uppercase;
-      border-bottom: 2px inset $gray-light;
+      border-bottom: 2px inset $gray-lighter;
       padding-bottom: 10px;
     }
 

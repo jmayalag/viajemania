@@ -21,13 +21,11 @@
 <!-- Packages Section -->
 <% @categories.each do |category| %>
     <section id="packages-<%= category.slug %>" class="content-section">
-      <div class="<%= cycle("package-section", "package-section-altern", name: 'section') %>">
+      <div class="<%= category.style_class %>" %>">
         <div class="container">
           <div class="col-lg-12 text-center">
             <h1 class="package-title"><%= category.nombre %></h1>
-
             <div class="row">
-              <%# calculate_offset(category.front_destinations.count) %>
               <%= render category.front_destinations %>
             </div>
           </div>
